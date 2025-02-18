@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css選擇器</title>
+    <style>
+        /* 元素選擇器 */
+     h2{
+        color: blue;
+    }
+        /* 類選擇器 */
+    .highlight{
+        background-color: yellow;
+    }
+        /* id選擇器 */
+    #header{
+        font-size: 35px;
+    }
+        /* 通用選擇器 */
+    *{
+        font-family: fantasy;
+        font-weight: bolder;
+    }
+        /* 子元素選擇器 */
+    .father > .son{
+        color: brown;
+    }
+        /* 後代選擇器 */
+    .father {
+        color: rgb(36, 139, 23);
+
+    }
+        /* 相鄰元素選擇器 */ 
+    h3 + p{
+        background-color: red;
+    }
+        /* 偽類選擇器 */
+    #element:hover{
+        background-color: blueviolet;
+    }
+    /* 
+    選中第一個子元素:first-child
+    選中第n個子元素:nth-child()
+    連結的一個狀態:active
+     */
+    </style>
+</head>
+
+
+<body>
+    <h1>不同類型的css選擇器</h1>
+    <h2>這是一個元素選擇器</h2>
+    <h3 class="highlight">這是一個類選擇器</h3>
+    <h3>這是另一個類選擇器</h3>
+
+    <h4 id="header">這是一個id選擇器</h4>
+
+    <div class="father">
+        <p class="son">這是一個子元素選擇器</p>
+        <div class="grandson">
+            這是一個後代選擇器
+        </div>
+    </div>
+    <br><br>
+
+    <p>這是一個普通的p標籤</p>
+    <h3>這是一個相鄰兄弟選擇器</h3>
+    <p>這是另一個p標籤</p>
+    <h3 id="element">這是一個偽類選擇器</h3>
+</body>
+</html>

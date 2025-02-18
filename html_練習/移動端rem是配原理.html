@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移動端rem是配原理</title>
+    
+    <style>
+        .box1-px{
+            height: 100px;
+            width: 300px;
+            background-color: blue;
+            margin-bottom:50px ;
+
+        }
+
+        .box2-rem{
+            height: 3rem;
+            width: 5rem;
+            background-color: blueviolet;
+        }
+    </style>
+
+    <script>
+        //根據設備寬度計算html標籤的font-size的屬性值，獲取設備寬度/10
+
+        function reset_HTML_FontSize(){
+            document.documentElement.style.fontSize = screen.width/10+'px';
+        }
+
+        reset_HTML_FontSize();
+        window.onresize = reset_HTML_FontSize;
+    </script>
+
+
+
+
+</head>
+<body>
+
+<div class="box1-px"></div>
+<div class="box2-rem"></div>
+    
+</body>
+</html>

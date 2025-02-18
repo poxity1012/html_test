@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格曾刪改查</title>
+
+    <script src="js\table.js"></script>
+
+    <style>
+        .title{
+            text-align: center;
+        }
+
+        #table1{
+            width: 100%;
+            border-collapse: collapse ;
+            margin-top: 20px;
+
+        }
+
+        th,td{
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 8px;
+
+        }
+
+        button{
+            margin-left:  5px;
+        }
+
+        th{
+            background-color: #ddd;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1 class="title">表格曾刪改查</h1>
+    <button onclick="addrow()">新增數據</button>
+    <table id="table1">
+        <tr>
+            <th>姓名</th>
+            <th>聯絡方式</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>一號</td>
+            <td>091111</td>
+            <td>
+                <button onclick="editRow(this)">編輯</button><button onclick="deleteRow(this)">刪除</button>
+            </td>
+
+        </tr>
+        
+
+    </table>
+    
+
+
+    
+
+
+</body>
+</html>

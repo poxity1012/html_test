@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_dom</title>
+</head>
+<body>
+    <div id="box1">這是一個id選擇器標籤</div>
+    <div class="box2">這是一個類選擇器標籤</div>
+    <div>這是一個普通的div標籤</div>
+    <button>點擊這裡</button>
+
+    <script>
+        let element_id = document.getElementById("box1");
+        console.log(element_id);
+
+        let element_class = document.getElementsByClassName("box2")[0];
+        console.log(element_class);
+
+        let element_tag = document.getElementsByTagName("div")[2];
+        console.log(element_tag);
+
+        element_id.innerHTML = "修改id選擇器標籤文本內容";
+        element_class.innerText = "修改後的類選擇器文本";
+
+        //innerHTML會返回文本的解析
+        element_id.innerHTML = '<a href="#">挑轉連結</a>';
+        //innerText會返回純文本
+        element_class.innerText = '<a href="#">挑轉連結</a>';
+
+        element_tag.style.color = "red";
+        element_tag.style.fontSize = "20px";
+
+
+        //dom綁定事件
+        let button_element = document.getElementsByTagName("button")[0];
+        // console.log(button_element);
+
+        // button_element.onclick = function(){
+        //     alert("dom 屬性 按鈕觸發");
+        // }
+
+        button_element.addEventListener('click',click_event)
+
+        function click_event(){
+            alert("透過 addEventListener 觸發按鍵");
+
+        }
+
+
+    </script>
+    
+</body>
+</html>

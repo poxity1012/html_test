@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css盒子模型</title>
+
+
+    <style>
+        .demo{
+            display: inline-block;
+            background-color: aqua;
+            border: 5px solid crimson;
+            /* 內邊距 */
+            padding: 50px;
+            /* 外邊距 */
+            margin: 50px;
+            
+        }
+
+        .border-demo{
+            color: cornsilk;
+            background-color: darkgreen;
+            height: 100px;
+            width: 200px;
+            border-style: solid dashed dotted double;
+            border-width: 0 10px 20px 50px;  
+            /* 順序:上右下左 */
+            border-color: blueviolet;
+
+            /* border-left: 10px solid brown; 單一左邊 */
+
+        }
+
+    </style>
+
+
+</head>
+
+
+<body>
+    <div class="demo">這是一個普通文字</div>
+    <br>
+    <br>
+
+    <div class="border-demo">這是一個邊框式例</div>
+
+    
+</body>
+</html>

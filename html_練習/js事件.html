@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html事件</title>
+</head>
+<body>
+
+    <button onclick="click_event()">這是一個點擊事件按鈕</button>
+    <input type="text" onfocus="fourse_event()" onblur="blur_event()">
+    
+
+    <script>
+        //點擊事件
+        function click_event(){
+            alert("點擊事件觸發了");
+        }
+
+        //焦點事件
+        function fourse_event(){
+            console.log("獲取焦點");
+        }
+
+        //失去焦點
+        function blur_event(){
+            console.log("失去焦點");
+        }
+
+
+
+    </script>
+</body>
+</html>

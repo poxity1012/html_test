@@ -1,0 +1,41 @@
+/* 元素選擇器 */
+h1 {
+    color: green;
+} 
+
+
+/*類選擇器*/
+.test1{
+color: blue;
+}
+
+/* id選擇器 */
+#test2{
+background-color: blueviolet;
+}
+
+/* 通用選擇器 */
+*{
+font-family: "DFKai-sb";
+}
+
+/* 子元素標籤 */
+.father >p.son {
+color: orangered;
+}
+
+/* 後代選擇器 */
+.father p{
+color: brown;
+font-size: 35px;
+}
+
+/* 相鄰選擇器 */
+h3 + p {
+background-color: yellow;
+}
+
+/* 這是一個偽類選擇器 */
+#element:hover{
+background-color: aqua;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSocket 圖片更新</title>
+</head>
+<body>
+  <h1>WebSocket 圖片更新</h1>
+  <img id="image" src="" alt="預設圖片">
+  <br>
+  <a href="#" onclick="changeImage()">點我更換圖片</a>
+
+  <script>
+    const ws = new WebSocket('ws://localhost:8080');
+
+    ws.onmessage = function(event) {
+      document.getElementById('image').src = event.data;
+    };
+
+    function changeImage() {
+      ws.send('change_image');
+    }
+  </script>
+</body>
+</html>
